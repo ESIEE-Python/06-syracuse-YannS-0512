@@ -23,64 +23,34 @@ def syr_plot(lsyr):
 #######################
 
 def syracuse_l(n):
-    """retourne la suite de Syracuse de source n
-
-    Args:
-        n (int): la source de la suite
-
-    Returns:
-        list: la suite de Syracuse de source n
-    """
-
-    # votre code ici 
-    l = [ ]
+    """retourne la suite de Syracuse de source n"""
+    l=[float(n)]
+    while n !=1:
+        if n%2 == 0:
+            n = n/2
+        else:
+            n = n*3 +1
+        l = l + [n]
     return l
 
 def temps_de_vol(l):
-    """Retourne le temps de vol d'une suite de Syracuse
+    """Retourne le temps de vol d'une suite de Syracuse"""
 
-    Args:
-        l (list): la suite de Syracuse
-
-    Returns:
-        int: le temps de vol
-    """
-    
-    # votre code ici
-
-    n = 0
-    return n
+    return len(l)
 
 def temps_de_vol_en_altitude(l):
-    """Retourne le temps de vol en altitude d'une suite de Syracuse
+    """Retourne le temps de vol en altitude d'une suite de Syracuse"""
+    i = 1
+    while l[0]<=l[i]:
+        i = i + 1
 
-    Args:
-        l (list): la suite de Syracuse
-
-    Returns:
-        int: le temps de vol en altitude
-    """
-
-    # votre code ici
-
-    n = 0
-    return n
+    return int(i)
 
 
 def altitude_maximale(l):
-    """retourne l'altitude maximale d'une suite de Syracuse
+    """retourne l'altitude maximale d'une suite de Syracuse"""
 
-    Args:
-        l (list): la suite de Syracuse
-
-    Returns:
-        int: l'altitude maximale
-    """
-    
-    # votre code ici
-    
-    n = 0
-    return n
+    return max(l)
 
 
 #### Fonction principale
